@@ -12,4 +12,4 @@ spec:
         autoscaling.knative.dev/target: "1"
     spec:
       containers:
-        - image: dashaun/io.dashaun.web.intro:latest
+        - image: dashaun/io.dashaun.web.intro:v0.0.5
