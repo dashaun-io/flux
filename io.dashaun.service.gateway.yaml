@@ -14,7 +14,7 @@ spec:
         autoscaling.knative.dev/window: "15s"
     spec:
       containers:
-        - image: dashaun/io.dashaun.service.gateway:v0.0.2
+        - image: dashaun/io.dashaun.service.gateway:v0.0.3
           env:
           - name: ZIPKIN_ENDPOINT
             value: http://openzipkin.dashaun-io.svc.cluster.local:9411/api/v2/spans
