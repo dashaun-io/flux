@@ -2,3 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - io.dashaun.web.intro.yaml
+  - io.dashaun.service.hello.yaml
+  - io.dashaun.service.gateway.yaml
+  - io.dashaun.service.llama.yaml
