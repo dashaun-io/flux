@@ -15,6 +15,8 @@ spec:
           env:
           - name: SPRING_CLOUD_BOOTSTRAP_ENABLED
             value: "true"
+          - name: SPRING_CLOUD_CONFIG_FAILFAST
+            value: "true"
           - name: SPRING_CLOUD_CONFIG_URI
             value: http://config-service.dashaun-io.knative.dashaun.cloud
           - name: ZIPKIN_ENDPOINT
