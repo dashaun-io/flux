@@ -11,7 +11,11 @@ spec:
         autoscaling.knative.dev/window: "300s"
     spec:
       containers:
-        - image: dashaun/io.dashaun.service.gateway:v0.0.4
+        - image: dashaun/io.dashaun.service.gateway:v0.0.5
           env:
+          - name: SPRING_CLOUD_BOOTSTRAP_ENABLED
+            value: "true"
+          - name: SPRING_CLOUD_CONFIG_URI
+            value: http://config-service.dashaun-io.knative.dashaun.cloud
           - name: ZIPKIN_ENDPOINT
             value: http://openzipkin.dashaun-io.svc.cluster.local:9411/api/v2/spans
