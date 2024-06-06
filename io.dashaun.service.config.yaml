@@ -14,7 +14,7 @@ spec:
         autoscaling.knative.dev/window: "60s"
     spec:
       containers:
-        - image: dashaun/io.dashaun.service.config:v0.0.1
+        - image: dashaun/io.dashaun.service.config:v0.0.0
           env:
           - name: SPRING_CLOUD_CONFIG_SERVER_GIT_URI
             value: https://github.com/dashaun-io/io.dashaun.config
