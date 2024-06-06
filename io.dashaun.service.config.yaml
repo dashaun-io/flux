@@ -1,0 +1,22 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: config-service
+  namespace: dashaun-io
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/activation-scale: "1"
+        autoscaling.knative.dev/max-scale: "2"
+        autoscaling.knative.dev/metric: "rps"
+        autoscaling.knative.dev/target: "10"
+        autoscaling.knative.dev/window: "60s"
+    spec:
+      containers:
+        - image: dashaun/io.dashaun.service.config:v0.0.1
+          env:
+          - name: SPRING_CLOUD_CONFIG_SERVER_GIT_URI
+            value: https://github.com/dashaun-io/io.dashaun.config
+          - name: ZIPKIN_ENDPOINT
+            value: http://openzipkin.dashaun-io.svc.cluster.local:9411/api/v2/spans
