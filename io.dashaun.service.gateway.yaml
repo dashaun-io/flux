@@ -18,6 +18,6 @@ spec:
           - name: SPRING_CLOUD_CONFIG_FAILFAST
             value: "true"
           - name: SPRING_CLOUD_CONFIG_URI
-            value: http://config-service.dashaun-io.knative.dashaun.cloud
+            value: http://config-service.dashaun-io.svc.cluster.local
           - name: ZIPKIN_ENDPOINT
             value: http://openzipkin.dashaun-io.svc.cluster.local:9411/api/v2/spans
